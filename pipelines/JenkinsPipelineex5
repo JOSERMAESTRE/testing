@@ -1,0 +1,25 @@
+pipeline{
+    agent any
+    environment{
+        Numberbuild="4"
+    }
+stages{    
+    stage("saludo 1"){
+        steps{
+            echo "hola desde saludo 1"
+        }
+    }
+    stage("Saludos 2"){
+        steps{
+            echo "hola desde saludo 2: paso_1"
+            echo "hola desde saludo 2: paso_2"
+        }
+    }
+    stage("imprimir variable de entorno"){
+        steps{
+            echo Numberbuild
+        }       
+    }   
+    
+}
+}
